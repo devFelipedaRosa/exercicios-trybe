@@ -10,8 +10,7 @@ function addCustomer(newCustomers) {
         }
         
     }
-    return trybeBankCustomers;
-  
+      
   
 }
 console.log(addCustomer(['Felipe','Maria']));

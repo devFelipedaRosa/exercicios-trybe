@@ -19,4 +19,6 @@ const reader = {
     publisher: 'Rocco',
   });
 
-  console.log(reader.favoriteBooks);
+//   console.log(reader.favoriteBooks);
+
+console.log(`Julia tem ${reader.favoriteBooks.length} livros favoritos`);

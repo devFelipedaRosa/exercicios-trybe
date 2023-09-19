@@ -6,9 +6,9 @@ const {
   } = require('./loginValidation.js');
   
   describe('a função verifyCredentials()', () => {
-    // veja que testamos o objeto `user` agora com outros dados
+    // // veja que testamos o objeto `user` agora com outros dados
     const user = {
-      userName: 'Bob',
+      userName: 'Joana',
       password: 123456,
     };
   

@@ -7,7 +7,8 @@ const people = [
   ];
   
   // Adicione seu código aqui
-  people.sort((a,b) => a.age - b.age);
-  
+//   people.sort((personA,personB) => personA.age - personB.age);
+  people.sort((personA,personB) => personB.age - personA.age);
+
   
   console.log(people);

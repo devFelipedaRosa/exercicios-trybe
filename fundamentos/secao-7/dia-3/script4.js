@@ -105,4 +105,22 @@ const findCountry = (countries, selectedCountry) => {
     return result;
 };
 
-console.log(findCountry(countries, 'Brazil'));
+// console.log(findCountry(countries, 'Brazil'));
+
+const newCountry = {
+    name: 'Germany',
+    region: 'Europe',
+    currencies: [{ code: 'EUR', name: 'Euro' }],
+    capital: 'Berlin',
+    population: 83190556,
+    area: 357386
+  };
+
+const addNewCountry = (countries, newCountry) => {
+    const updatedCountries = [...countries];
+    updatedCountries.push (newCountry);
+
+    return updatedCountries;
+};
+
+console.log(addNewCountry(countries, newCountry));

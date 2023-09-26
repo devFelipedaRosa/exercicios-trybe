@@ -97,4 +97,12 @@ countries.forEach ((country) => {
     countriesInfoArray.push (countryInfo);
   });
 
-  console.log(countriesInfoArray);
+//   console.log(countriesInfoArray);
+
+const findCountry = (countries, selectedCountry) => {
+    const result = countries.find ((country) => country.name === selectedCountry);
+    if (!result) throw new Error ('País não encontrado!');
+    return result;
+};
+
+console.log(findCountry(countries, 'Brazil'));

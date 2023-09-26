@@ -85,4 +85,16 @@ const countries = [
 
   countries.forEach ((country) => country.planet = 'Earth');
 
-  console.log(countries);
+//   console.log(countries);
+
+const countriesInfoArray = [];  
+countries.forEach ((country) => {
+    const countryInfo = {
+        name: country.name,
+        currencyCode: country.currencies[0].code,
+        currencyName: country.currencies[0].name
+    }
+    countriesInfoArray.push (countryInfo);
+  });
+
+  console.log(countriesInfoArray);

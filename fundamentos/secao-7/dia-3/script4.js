@@ -123,4 +123,11 @@ const addNewCountry = (countries, newCountry) => {
     return updatedCountries;
 };
 
-console.log(addNewCountry(countries, newCountry));
+// console.log(addNewCountry(countries, newCountry));
+
+const buildString = (countries) => {
+    const countryString = countries.map ((country) => `${country.name} - ${country.capital} - ${country.currencies[0].code} - ${country.currencies[0].name}`);
+    return countryString;
+};
+
+console.log(buildString(countries));

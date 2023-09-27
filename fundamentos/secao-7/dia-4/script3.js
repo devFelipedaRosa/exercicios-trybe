@@ -82,4 +82,29 @@ const countries = [
     return acc;
   })
 
-  console.log(longestName);
+//   console.log(longestName);
+
+
+    const totalAreaByRegion = (countries, region) => {
+        return countries.reduce ((acc, country) => {
+            if (country.region === region) {
+                acc += country.area;
+            };
+            return acc;
+        }, 0);
+    };
+
+    // console.log(totalAreaByRegion(countries, 'Europe'));
+
+    const getLargestCountriesByRegion = () => {
+        const largestCountriesByRegion = countries.reduce((acc, country) => {
+          if (!acc[country.region] || country.area > acc[country.region].area) {
+            acc[country.region] = { name: country.name, area: country.area };
+          }
+          return acc;
+        }, {});
+      
+        return largestCountriesByRegion;
+      };
+
+      console.log(getLargestCountriesByRegion());

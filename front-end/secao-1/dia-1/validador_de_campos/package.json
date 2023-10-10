@@ -1,0 +1,19 @@
+{
+  "name": "validador_de_campos",
+  "version": "1.0.0",
+  "description": "Projeto da primeira aula de front-end",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite --open",
+    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js"
+  },
+  "keywords": [],
+  "author": "Felipe_daRosa",
+  "license": "ISC",
+  "dependencies": {
+    "@trybe/eslint-config-frontend": "^1.11.4",
+    "validator": "^13.11.0",
+    "vite": "^4.4.11"
+  }
+}

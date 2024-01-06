@@ -2,7 +2,7 @@ const firstLi = document.getElementById('first-li');
 const secondLi = document.getElementById('second-li');
 const thirdLi = document.getElementById('third-li');
 const input = document.getElementById('input');
-const myWebpage = document.getElementById('my-spotrybefy');
+const myWebpage = document.getElementById('myself');
 
 
 // 1. Copie esse arquivo e edite apenas ele.
@@ -32,8 +32,8 @@ input.addEventListener('input', (event) => {
 // redirecione para alguma página.
 // 4.1. Que tal redirecionar para seu portfólio? Dica: Lembre-se dos métodos `window.location.replace` e `window.open`.
 
-myWebpage.addEventListener('dblclick', () => {
-    window.location.replace('https://blog.betrybe.com/');
+myWebpage.addEventListener('click', () => {
+    window.open('https://devfelipedarosa.github.io/');
 });
 
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
@@ -42,14 +42,20 @@ myWebpage.addEventListener('dblclick', () => {
 myWebpage.addEventListener('mouseover', (event) => {
 
     event.target.style.color = 'red';
-  
+    event.target.style.cursor = 'pointer';
+
   });
-  
-  
+
+myWebpage.addEventListener('mouseout', (event) => {
+  event.target.style.color = 'unset';
+  event.target.style.cursor = 'auto';
+});
+
+
   myWebpage.addEventListener('mouseout', (event) => {
-  
+
     event.target.style.color = 'unset';
-  
+
   });
 
 
@@ -64,6 +70,9 @@ const resetText = (event) => {
 }
 
 firstLi.addEventListener('dblclick', resetText);
+secondLi.addEventListener('dblclick', resetText);
+thirdLi.addEventListener('dblclick', resetText);
+
 
 // Não precisa passar o parâmetro dentro da callback resetText. O próprio
 // navegador fará esse trabalho por você, não é legal? Desse jeito, o
